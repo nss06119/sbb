@@ -10,6 +10,12 @@ public class MainController {
     @ResponseBody
     public String index(){
         System.out.println("index");
-        return "index";
+        return "안녕하세요. sbb에 오신 것을 환영합니다.";
     }
+
+    @GetMapping("/")
+    public String root(){
+        return "redirect:/question/list";
+    }
+
 }
